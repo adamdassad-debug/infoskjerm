@@ -4,9 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Litt raskere lasting av Easyplay -->
-  <link rel="preconnect" href="https://www.easyplay.no">
-
   <style>
     html, body {
       margin: 0;
@@ -22,21 +19,15 @@
       height: 100vh;
     }
 
-    /* Bilder fyller skjermen */
     img {
       width: 100%;
       height: 100%;
-      border: 0;
       object-fit: contain;
       display: block;
+      border: 0;
     }
 
-    /*
-      Easyplay: zoom UT så du ser mer av dagens tider.
-      Juster scale-tallet hvis du vil:
-      - 0.70 = mer innhold, mindre tekst
-      - 0.80 = større tekst, mindre innhold
-    */
+    /* Wrapper for kalender */
     .calwrap {
       width: 100vw;
       height: 100vh;
@@ -44,11 +35,12 @@
       background: black;
     }
 
+    /* Easyplay – zoom UT + flytt NED */
     .calwrap iframe {
       width: 140%;
       height: 140%;
       border: 0;
-      transform: scale(0.75);
+      transform: scale(0.75) translateY(-140px);
       transform-origin: top left;
       display: block;
     }
@@ -59,32 +51,32 @@
 
   <!-- SLIDE 1 – BILDE -->
   <div class="slide">
-    <img src="slide1.jpg" alt="Slide 1">
+    <img src="slide1.jpg">
   </div>
 
   <!-- SLIDE 2 – BILDE -->
   <div class="slide">
-    <img src="slide2.jpg" alt="Slide 2">
+    <img src="slide2.jpg">
   </div>
 
-  <!-- SLIDE 3 – XL-BYGG (LIVE) -->
+  <!-- SLIDE 3 – XL-BYGG -->
   <div class="slide">
     <div class="calwrap">
-      <iframe src="https://www.easyplay.no/clubs/fgi?stadium=XL-Bygg_banen&hideHeader=true" allowfullscreen></iframe>
+      <iframe src="https://www.easyplay.no/clubs/fgi?stadium=XL-Bygg_banen&hideHeader=true"></iframe>
     </div>
   </div>
 
-  <!-- SLIDE 4 – HIKE (LIVE) -->
+  <!-- SLIDE 4 – HIKE -->
   <div class="slide">
     <div class="calwrap">
-      <iframe src="https://www.easyplay.no/clubs/fgi?stadium=Hike-Banen&hideHeader=true" allowfullscreen></iframe>
+      <iframe src="https://www.easyplay.no/clubs/fgi?stadium=Hike-Banen&hideHeader=true"></iframe>
     </div>
   </div>
 
-  <!-- SLIDE 5 – HARRY PEPPER (LIVE) -->
+  <!-- SLIDE 5 – HARRY PEPPER -->
   <div class="slide">
     <div class="calwrap">
-      <iframe src="https://www.easyplay.no/clubs/fgi?stadium=Harry_Pepper_Banen&hideHeader=true" allowfullscreen></iframe>
+      <iframe src="https://www.easyplay.no/clubs/fgi?stadium=Harry_Pepper_Banen&hideHeader=true"></iframe>
     </div>
   </div>
 
