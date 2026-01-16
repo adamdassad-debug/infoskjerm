@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <style>
     html, body {
       margin: 0;
@@ -22,60 +21,53 @@
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      display: block;
-      border: 0;
+      object-fit: cover;
     }
 
-    /* Wrapper for kalender */
-    .calwrap {
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      background: black;
-    }
-
-    /* Easyplay – zoom UT + flytt NED */
-    .calwrap iframe {
-      width: 140%;
+    /* Kalender-wrapper */
+    .calendar {
+      width: 100%;
       height: 140%;
+      transform: translateY(-30%) scale(1.1);
+      transform-origin: top;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
       border: 0;
-      transform: scale(0.65) translateY(-260px);
-      transform-origin: top left;
-      display: block;
     }
   </style>
 </head>
-
 <body>
 
-  <!-- SLIDE 1 – BILDE -->
+  <!-- SLIDE 1 -->
   <div class="slide">
     <img src="slide1.jpg">
   </div>
 
-  <!-- SLIDE 2 – BILDE -->
+  <!-- SLIDE 2 -->
   <div class="slide">
     <img src="slide2.jpg">
   </div>
 
-  <!-- SLIDE 3 – XL-BYGG -->
+  <!-- XL-BYGG -->
   <div class="slide">
-    <div class="calwrap">
+    <div class="calendar">
       <iframe src="https://www.easyplay.no/clubs/fgi?stadium=XL-Bygg_banen&hideHeader=true"></iframe>
     </div>
   </div>
 
-  <!-- SLIDE 4 – HIKE -->
+  <!-- HIKE -->
   <div class="slide">
-    <div class="calwrap">
+    <div class="calendar">
       <iframe src="https://www.easyplay.no/clubs/fgi?stadium=Hike-Banen&hideHeader=true"></iframe>
     </div>
   </div>
 
-  <!-- SLIDE 5 – HARRY PEPPER -->
+  <!-- HARRY PEPPER -->
   <div class="slide">
-    <div class="calwrap">
+    <div class="calendar">
       <iframe src="https://www.easyplay.no/clubs/fgi?stadium=Harry_Pepper_Banen&hideHeader=true"></iframe>
     </div>
   </div>
@@ -83,7 +75,7 @@
   <script>
     let index = 0;
     const slides = document.querySelectorAll(".slide");
-    const duration = 10000; // 10 sek per slide
+    const duration = 10000;
 
     function showSlide() {
       slides.forEach(s => s.style.display = "none");
